@@ -1,0 +1,215 @@
+.dashboard {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.welcome-text {
+    width: 35rem;
+    -ms-transform: translateY(-65%);
+    transform: translateY(-65%);
+    padding: 20px;
+    position: relative;
+    background: #333;
+    color: rgb(245, 240, 240);
+    font-size: calc(10px + 2vmin);
+    align-items: center;
+    text-align: center;
+    margin-bottom: 300px;
+    margin-top: 200px;
+}
+
+.container {
+    margin-top: 350px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+.container .card .face {
+    width: 300px;
+    height: 260px;
+    transition: 0.5s;
+}
+
+.container .card .face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(130px);
+}
+
+.container .card:hover .face1 {
+    background: #a6d1c9;
+    transform: translateY(0);
+}
+
+.container .card .face1 .content {
+    opacity: 0.4;
+    transition: 0.5s;
+}
+
+.container .card:hover .face1 .content {
+    opacity: 1;
+}
+
+.container .card .face1 .content img {
+    max-width: 100px;
+}
+
+.container .card .face1 .content h2 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+.container .card .face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+    transform: translateY(-130px);
+}
+
+.container .card:hover .face2 {
+    transform: translateY(0);
+}
+
+.container .card .face2 p {
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face2 a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face2 a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.container .card .face2 button {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    background: #fff;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face2 button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.container .card .face2 input[type="text"] {
+    text-decoration: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.container .card .face2 input[type="number"] {
+    margin-left: 5px;
+    margin-right: 20px;
+    padding: 5px;
+    width: 25%;
+}
+
+.container .card .face2 .date-picker {
+    width: 54%;
+    margin-right: 35px;
+    float: left;
+}
+
+.mediaRating input {
+    display:block;
+    margin-bottom: 10px;
+}
+
+.movieGenre, .showGenre {
+    padding: 5px;
+    margin-right: 25px;
+}
+
+.container .card .face2 .showButton {
+    padding: 10px;
+    width: 85px;
+}
+
+.stepOneShow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.showDate {
+    margin-left: 60px;
+}
+
+.showSeason, .showEpisode, .showLastStep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showSeason label, .showEpisode label {
+    width: 45%;
+    display: block;
+}
+
+.container .card .face2 .showPosition input[type="number"] {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+.currentShowSelect {
+    width: 90%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+.showUpdateComplete {
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .face2 .showLastStep input[type="number"] {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 50%;
+}

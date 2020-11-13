@@ -1,0 +1,19 @@
+.navbar {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.nav-link {
+    color: white;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.navbar-item {
+    padding-left: 10px;
+}
+
+.navbar-brand {
+    color: white;
+    margin-left: 15px;
+    font-weight: 500;
+}

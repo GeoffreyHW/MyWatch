@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import axios from 'axios';
+import Navbar from "./components/navbar.component";
+import Dashboard from "./components/dashboard.component";
+import Statistics from "./components/statistics.component";
+import FutureWatches from "./components/future-watches.component";
+import WatchList from "./components/watch-list.component";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [shows, setShows] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/current-show/')
+        .then(response => {
+            if(response.data.length > 0) {
+                setShows(response.data);
+            }
+        });
+    }, []);
+    
+    return (
+        <div className="App">
+            <Router>
+                <Navbar />
+                <br/>
+                <Route path="/" exact render={(props) => (
+                    <Dashboard {...props} shows={shows}/>
+                )} />
+                <Route path="/stats" component={Statistics}/>
+                <Route path="/futurewatches" component={FutureWatches} />
+                <Route path="/watchlist" component={WatchList} />
+            </Router>
+        </div>
   );
 }
 
